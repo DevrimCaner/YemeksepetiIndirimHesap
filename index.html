@@ -11,104 +11,101 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 </head>
 
-<body>
-    <div class="container">
-        <h3> Yemek Sepeti İndirim Hesaplama</h3>
-        <div class="row valign-wrapper">
-            <div class="col valign-wrapper">
-                <a class="waves-effect waves-light btn blue" id="addButton"><i class="material-icons left">add</i>Ürün
-                    Ekle</a>
-            </div>
-            <div class="col">
-                <div class="input-field col s12">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">İndirimli Toplam</label>
+    <body>
+        <div class="container">
+            <h3> Yemek Sepeti İndirim Hesaplama</h3>
+            <div class="row valign-wrapper">
+                <div class="col valign-wrapper">
+                    <a class="waves-effect waves-light btn blue" id="addButton"><i class="material-icons left">add</i>Ürün
+                        Ekle</a>
                 </div>
-            </div>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Asıl Fiyat</th>
-                    <th>Adet</th>
-                    <th>İndirimli Fiyat</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>
-                        <input id="last_name" type="text" class="validate" placeholder="0₺">
-                    </td>
-                    <td>
-                        <input id="last_name" type="text" class="validate" placeholder="1">
-                    </td>
-                    <td>
-                        <input disabled value="0₺" id="disabled" type="text" class="validate">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="last_name" type="text" class="validate" placeholder="0₺">
-                    </td>
-                    <td>
-                        <input id="last_name" type="text" class="validate" placeholder="1">
-                    </td>
-                    <td>
-                        <input disabled value="0₺" id="disabled" type="text" class="validate">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="last_name" type="text" class="validate" placeholder="0₺">
-                    </td>
-                    <td>
-                        <input id="last_name" type="text" class="validate" placeholder="1">
-                    </td>
-                    <td>
-                        <input disabled value="0₺" id="disabled" type="text" class="validate">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Alt taraf eski -->
-        <!--
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Asıl Fiyat</th>
-                    <th scope="col">İndirimli Fiyat</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
-        <div class="row" id="total">
-            <div class="col">
-                <h4>Asıl Toplam : <span id="beforeTotal"></span> ₺</h4>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="col">
-                        <h4>İndirimli Toplam :</h4>
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="afterTotal" placeholder="₺">
+                <div class="col">
+                    <div class="input-field col s12">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">İndirimli Toplam</label>
                     </div>
                 </div>
             </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asıl Fiyat</th>
+                        <th>Adet</th>
+                        <th>İndirimli Fiyat</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input id="last_name" type="text" class="validate" placeholder="0₺">
+                        </td>
+                        <td>
+                            <input id="last_name" type="text" class="validate" placeholder="1">
+                        </td>
+                        <td>
+                            <input disabled value="0₺" id="disabled" type="text" class="validate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="last_name" type="text" class="validate" placeholder="0₺">
+                        </td>
+                        <td>
+                            <input id="last_name" type="text" class="validate" placeholder="1">
+                        </td>
+                        <td>
+                            <input disabled value="0₺" id="disabled" type="text" class="validate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="last_name" type="text" class="validate" placeholder="0₺">
+                        </td>
+                        <td>
+                            <input id="last_name" type="text" class="validate" placeholder="1">
+                        </td>
+                        <td>
+                            <input disabled value="0₺" id="disabled" type="text" class="validate">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!--
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Asıl Fiyat</th>
+                        <th scope="col">İndirimli Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+            <div class="row" id="total">
+                <div class="col">
+                    <h4>Asıl Toplam : <span id="beforeTotal"></span> ₺</h4>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4>İndirimli Toplam :</h4>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="afterTotal" placeholder="₺">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Update()"> Hesapla </button>
         </div>
-        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Update()"> Hesapla </button>
-    </div>
 
--->
+    -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="main.js"></script>
-</body>
+    </body>
 
 </html>
