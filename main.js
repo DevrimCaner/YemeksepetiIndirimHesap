@@ -1,3 +1,26 @@
+var app = new Vue({
+    el: '#app',
+    data: {
+        denemeTest:"Yemek Sepeti indirim hesaplama",
+        beforeTotal:37,
+        afterTotal:27,
+        prices:[{
+                beforePrice:10,
+                afterPrice:8
+            },{
+                beforePrice:12,
+                afterPrice:9
+            },{
+                beforePrice:15,
+                afterPrice:10
+            },
+        ]
+    }
+});
+
+
+/*
+
 tableBody = document.getElementById("tableBody");
 
 beforePrices = [];
@@ -33,3 +56,5 @@ function calculate(money, total, discountTotal) {
 function createTableItem(id) {
     return "<tr><th scope='row'>" + id + "</th><td><input id='b" + id + "' type='text' class='form-control' placeholder='₺' value=\"0\"></td><td><h5 id='a" + id + "' ></h5></td></tr>"
 }
+
+*/
