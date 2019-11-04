@@ -9,37 +9,38 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 </head>
 
-    <body>
-        <div id="app">
-            <h3> {{denemeTest}} </h3>
-            <a href="#">Ürün Ekle</a>
-            <input placeholder="İndirimli Toplam" id="last_name" type="text" class="validate">
+<body>
+    <div id="app">
+        <h3> {{denemeTest}} </h3>
+        <button v-on:click="addBtn">Ürün Ekle</button>
+        {{beforeTotal}}
+        <input v-on:input="calculateData" v-model="afterTotal" />
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Asıl Fiyat</th>
-                        <th>Adet</th>
-                        <th>İndirimli Fiyat</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="price in prices" >
-                        <td>
-                            {{ price.beforePrice }}<!-- <input id="last_name" type="text" class="validate" placeholder="0₺"> -->
-                        </td>
-                        <td>
-                            <input id="last_name" type="text" class="validate" placeholder="1">
-                        </td>
-                        <td>
-                            <input disabled value="0₺" id="disabled" type="text" class="validate">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="main.js"></script>
-    </body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Asıl Fiyat</th>
+                    <th>Adet</th>
+                    <th>İndirimli Fiyat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="price in prices">
+                    <td>
+                        <input v-on:input="calculateData" v-model="price.beforePrice" />
+                    </td>
+                    <td>
+                        <input v-on:input="calculateData" v-model="price.piece" />
+                    </td>
+                    <td>
+                        {{price.afterPrice}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
 
 </html>
