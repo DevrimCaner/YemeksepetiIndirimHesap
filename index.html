@@ -11,10 +11,19 @@
 
 <body>
     <div id="app">
-        <h3> {{denemeTest}} </h3>
-        <button v-on:click="addBtn">Ürün Ekle</button>
-        {{beforeTotal}}
-        <input v-on:input="calculateData" v-model="afterTotal" />
+        <h1> {{title}} </h1>
+        <div class="row">
+            <div class="col">
+                <button v-on:click="addBtn">Ürün Ekle</button>
+            </div>
+            <div class="col col-before">
+                
+                <label>{{totalText1}}</label><h4>{{beforeTotal}}</h4>
+            </div>
+            <div class="col col-after">
+                <label>{{totalText2}}</label><h4> {{afterTotal}} </h4>
+            </div>
+        </div>
 
         <table>
             <thead>

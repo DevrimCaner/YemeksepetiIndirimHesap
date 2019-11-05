@@ -1,7 +1,9 @@
 var app = new Vue({
     el: '#app',
     data: {
-        denemeTest: "Yemek Sepeti indirim hesaplama",
+        title: "Yemek Sepeti indirim hesaplama",
+        totalText1: "Joker Öncesi",
+        totalText2: "Jokerli Tutar",
         beforeTotal: 0,
         afterTotal: 0,
         prices: [{
@@ -32,3 +34,15 @@ var app = new Vue({
         }
     }
 });
+
+/*
+
+30 -> 20
+
+40 -> 25
+
+70 -> 45
+
+120 -> 75
+
+*/
