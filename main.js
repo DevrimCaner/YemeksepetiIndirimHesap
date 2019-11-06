@@ -1,7 +1,6 @@
 var app = new Vue({
     el: '#app',
     data: {
-        title: "Yemek Sepeti indirim hesaplama",
         totalText1: "Joker Öncesi",
         totalText2: "Jokerli Tutar",
         beforeTotal: 0,
@@ -23,26 +22,35 @@ var app = new Vue({
             this.prices.push(newPrice);
         },
         calculateData: function () {//Calculating All Data
-            //Coding Here
+            //Setting Beforetotal
             this.beforeTotal = parseFloat(0);
             this.prices.forEach(price => {
                 this.beforeTotal += (parseFloat(price.beforePrice) * parseFloat(price.piece));
             });
+            //setting After Total
+            if(parseFloat(this.beforeTotal) < 30){
+                this.afterTotal = this.beforeTotal;
+            }
+            else if(parseFloat(this.beforeTotal) >= 30){
+                this.afterTotal = parseFloat(this.beforeTotal) - 10;
+            }
+            else if(parseFloat(this.beforeTotal) >= 40){
+                this.afterTotal = parseFloat(this.beforeTotal) - 20;
+            }
+            else if(parseFloat(this.beforeTotal) >= 70){
+                this.afterTotal = parseFloat(this.beforeTotal) - 25;
+            }
+            else if(parseFloat(this.beforeTotal) >= 120){
+                this.afterTotal = parseFloat(this.beforeTotal) - 45;
+            }
+            else{
+                this.afterTotal = this.beforeTotal;
+            }
+            
+            //setting Prices
             this.prices.forEach(price => {
                 price.afterPrice = (parseFloat(price.beforePrice) / parseFloat(this.beforeTotal)) * parseFloat(this.afterTotal);
             });
         }
     }
 });
-
-/*
-
-30 -> 20
-
-40 -> 25
-
-70 -> 45
-
-120 -> 75
-
-*/

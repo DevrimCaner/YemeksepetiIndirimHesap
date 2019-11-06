@@ -9,10 +9,18 @@
 }
 #app{
     margin: 0;
-    padding: 30px;
+    padding: 40px;
 }
-
-
+nav{
+    margin: 0;
+    padding: 0;
+    background-color: #c0392b;
+    padding: 25px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
 button{
     border: none;
     padding: 12px 16px;
@@ -21,24 +29,19 @@ button{
     border-radius: 4px;
     color: #fff;
     width: 90%;
-    border-top: 2px solid #2ecc71;
     border-bottom: 2px solid #bdc3c7;
 }
 button:hover{
-    border-top: none;
+    background-color: #2ecc71;
 }
 button:active{
     border-bottom: none;
 }
-h1{
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-}
+
 
 input{
     height: 100%;
-    width: 40px;
+    width: 30px;
     font-size: 14px;
     padding: 5px;
     padding-left: 10px;
@@ -76,7 +79,17 @@ input:focus{
 table{
     width: 100%;
     margin-top: 40px;
-}
-table{
     text-align: center;
+    border-radius: 4px;
+    background-color: #c0c0c0;
+    border: none;
+}
+table thead th{
+    padding: 5px;
+}
+table tbody{
+    background-color: #fff;
+}
+table tbody td{
+    padding: 5px;
 }

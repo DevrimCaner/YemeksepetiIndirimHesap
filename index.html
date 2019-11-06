@@ -10,8 +10,10 @@
 </head>
 
 <body>
+    <nav>
+        <h1> Yemek Sepeti indirim hesaplama </h1>
+    </nav>
     <div id="app">
-        <h1> {{title}} </h1>
         <div class="row">
             <div class="col">
                 <button v-on:click="addBtn">Ürün Ekle</button>
@@ -36,10 +38,10 @@
             <tbody>
                 <tr v-for="price in prices">
                     <td>
-                        <input v-on:input="calculateData" v-model="price.beforePrice" />
+                        <input type="number" v-on:input="calculateData" v-model="price.beforePrice" />
                     </td>
                     <td>
-                        <input v-on:input="calculateData" v-model="price.piece" />
+                        <input type="number" v-on:input="calculateData" v-model="price.piece" />
                     </td>
                     <td>
                         {{price.afterPrice}}
