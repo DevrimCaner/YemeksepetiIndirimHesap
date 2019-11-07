@@ -9,7 +9,7 @@
 }
 #app{
     margin: 0;
-    padding: 40px;
+    padding-top: 40px;
 }
 nav{
     margin: 0;
@@ -59,6 +59,7 @@ input:focus{
 
 .row{
     display: flex;
+    margin: 0 40px;
 }
 .col{
     flex: 1;
@@ -104,6 +105,7 @@ table tbody td{
     .container{
         overflow-y: scroll;
         max-height: 500px;
+        margin-top: 10px;
     }
     button{
         font-size: 10px;
@@ -113,5 +115,11 @@ table tbody td{
     }
     .col h4{
         font-size: 12px;
+    }
+    #app{
+        padding-top: 20px;
+    }
+    .row{
+        margin: 0 20px;
     }
   }
