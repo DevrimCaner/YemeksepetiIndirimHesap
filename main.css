@@ -30,12 +30,19 @@ button{
     color: #fff;
     width: 90%;
     border-bottom: 2px solid #bdc3c7;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 button:hover{
     background-color: #2ecc71;
 }
 button:active{
-    border-bottom: none;
+    border-bottom-color: #fff;
 }
 
 input{
@@ -94,6 +101,63 @@ table tbody{
 table tbody td{
     padding: 5px;
 }
+.container{
+    margin: 0 40px;
+}
+.result{
+    text-align: left;
+}
+.result button{
+    border: none;
+    padding: 0 5px;
+    font-size: 14px;
+    background-color: #c0392b;
+    border-radius: 4px;
+    color: #fff;
+    width: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    float: right;
+    vertical-align: middle;
+}
+.result button:hover{
+    background-color: #e74c3c;
+}
+.result button:active{
+    background: none;
+    color: #333;
+}
+.clear-btn{
+    border: none;
+    background: none;
+    color: #c0392b;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    float: right;
+    vertical-align: middle;
+}
+.clear-btn:hover{
+    color: #e74c3c;
+    background: none;
+}
+.clear-btn:active{
+    text-decoration: underline;
+}
 
 @media only screen and (max-width: 768px) {
     nav{
@@ -105,6 +169,7 @@ table tbody td{
     .container{
         overflow-y: scroll;
         max-height: 500px;
+        margin: 0 ;
         margin-top: 10px;
     }
     button{
@@ -121,5 +186,8 @@ table tbody td{
     }
     .row{
         margin: 0 20px;
+    }
+    table{
+        margin-top: 0 ;
     }
   }

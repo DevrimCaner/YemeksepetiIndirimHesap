@@ -35,22 +35,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="price in prices">
+                    <tr v-for="(price , key) in prices">
                         <td>
                             <input type="number" v-on:input="calculateData" v-model="price.beforePrice" step="1" />
                         </td>
                         <td>
                             <input type="number" v-on:input="calculateData" v-model="price.piece" min="1" step="1" />
                         </td>
-                        <td>
+                        <td class="result">
                             {{price.afterPrice}}
+                            <button v-on:click="removeElement(key)" >-</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="row">
+            <div class="col">
+                <button class="clear-btn" v-on:click="clearData" > Temizle </button>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"></script>
     <script src="main.js"></script>
 </body>
 
