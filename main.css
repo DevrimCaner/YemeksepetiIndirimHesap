@@ -38,18 +38,21 @@ button:active{
     border-bottom: none;
 }
 
-
 input{
     height: 100%;
-    width: 30px;
+    width: 80%;
     font-size: 14px;
     padding: 5px;
-    padding-left: 10px;
+    padding-right: 0;
     border-radius: 4px;
     background: none;
     border: 1px solid #c0c0c0;
     border-top-width: 3px;
 }
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    border-radius: 0;
+  }
 input:focus{
     border-color: #ff9f1a;
 }
@@ -93,3 +96,16 @@ table tbody{
 table tbody td{
     padding: 5px;
 }
+
+@media only screen and (max-width: 768px) {
+    nav{
+        padding: 15px;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .container{
+        overflow-y: scroll;
+        max-height: 500px;
+    }
+  }
