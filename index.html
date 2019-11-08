@@ -37,7 +37,7 @@
                 <tbody>
                     <tr v-for="(price , key) in prices">
                         <td>
-                            <input type="number" v-on:input="calculateData" v-model="price.beforePrice" step="1" />
+                            <input onClick="this.setSelectionRange(0, this.value.length)" stype="number" v-on:input="calculateData" v-model="price.beforePrice" step="1" />
                         </td>
                         <td>
                             <input type="number" v-on:input="calculateData" v-model="price.piece" min="1" step="1" />
