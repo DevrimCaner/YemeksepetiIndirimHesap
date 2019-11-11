@@ -40,7 +40,7 @@ var app = new Vue({
                 this.afterTotal = parseFloat(this.beforeTotal) - 10;
             }
             else if (parseFloat(this.beforeTotal) >= 40 && parseFloat(this.beforeTotal) < 70) {
-                this.afterTotal = parseFloat(this.beforeTotal) - 20;
+                this.afterTotal = parseFloat(this.beforeTotal) - 15;
             }
             else if (parseFloat(this.beforeTotal) >= 70 && parseFloat(this.beforeTotal) < 120) {
                 this.afterTotal = parseFloat(this.beforeTotal) - 25;
